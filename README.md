@@ -40,7 +40,7 @@ The first step in training ML models is to split the data into training and test
 
 Our baseline modeel used was a Random Forest Classifier
 
-Random forest classifier, Decision tree, and Gradient Boosting classifier algorithms were used in our ***test_code_XX_11_220 notebook*** 
+Random forest classifier, Decision tree, and Gradient Boosting classifier algorithms were used in our ***test_code_22_11_220 notebook*** 
 
 F1 score is the harmonic mean between precision and recall, and ROC-AUC is the area under the ROC curve. These two are better metrics for evaluating the model performance for imbalanced data
 
