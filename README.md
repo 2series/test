@@ -4,7 +4,7 @@ For banks, it's an interesting and challenging problem to predict how likely cli
 
 ## About the dataset
 
-Historical financial transactions 
+Historical financial transactions. This dataset contains approximately 308k line items, with a mix of numerical and categorical columns 
 
 ## Data pre-processing
 
@@ -32,10 +32,16 @@ We scaled numeric variables using scikit-learn option RobustScaler. On the other
 
 The first step in training ML models is to split the data into training and testing sets. It's tricky in our dataset because it is not balanced: there are almost 12 times more "good" loans than "bad" loans. A stratified split is a good option here because it preserves the ratio between classes in both train and test sets
 
+Our baseline modeel used was a Random Forest Classifier
+
 Random forest classifier, Decision tree, and Gradient Boosting classifier algorithms were used in our ***test_code_22_11_220 notebook*** 
 
 F1 score is the harmonic mean between precision and recall, and ROC-AUC is the area under the ROC curve. These two are better metrics for evaluating the model performance for imbalanced data
 
 With the models built, we ranked the features based on their importance, i.e features having the most predictive powers
+
+For hamdling the imbalanced data we used SMOTE technique. SMOTE (Synthetic Minority Over-sampling Technique) is a type of over-sampling procedure that is used to correct the imbalances in our classes. This technique created new data instances of the minority class "bad loans" by copying existing minority instances and making small changes to them
+
+Oversampling’s purpose is for us to feel confident the data we generate are real examples of already existing data. This inherently comes with the issue of creating more of the same data we currently have, without adding any diversity to our dataset, and producing effects such as overfitting
 
 
